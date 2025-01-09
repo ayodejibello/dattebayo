@@ -3,8 +3,12 @@ const CharacterMain = ({ charArray, index }) => {
   localStorage.setItem("array", charArray);
   return (
     <div
-      className="w-full h-full overflow-scroll p-5 "
-      style={{ backgroundImage: `url${charArray[index].images[0]}` }}
+      className="w-full h-full overflow-scroll p-5 bg-cover bg-center bg-no-repeat"
+      style={{
+        backgroundImage: `url(${
+          charArray[index].images[1] || charArray[index].images[0]
+        })`,
+      }}
     >
       <h1 className="text-white">{charArray[index].name}</h1>
       <span className="font-bold text-white text-lg">Skillset:</span>
