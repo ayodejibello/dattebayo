@@ -16,7 +16,7 @@ const Home = () => {
           </a>
           to create a cool site that allows Otakus to have Access to some cool
           Naruto Facts . But most of all, it is just a practice project of an
-          aesthetic Otaku with love for Tech.......
+          aesthetic Tech Otaku.......
           <img
             src={smiley}
             alt="smiley face"
