@@ -2,20 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 .spinner {
-  width: 200px;
-  height: 200px;
-  background-color: rgb(14, 231, 213);
   animation-name: spinner;
+  animation-delay: 2s;
   animation-iteration-count: infinite;
-  animation-duration: 0.5s;
   display: flex;
-  justify-self: center;
   justify-content: center;
   align-items: center;
-  margin: 50px;
+  justify-self: center;
+  margin: 200px auto;
 }
 @keyframes spinner {
   from {
     transform: rotate(360deg);
+    translate: 200px;
   }
+  to {
+    translate: 400px;
+  }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "itim", calibri;
+}
+p {
+  font-family: "itim", calibri;
+}
+a {
+  text-decoration: underline;
+  font-family: "itim", calibri;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }

@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import Loading from "../Loading";
 import Nav from "../Nav";
-import PageWrapper from "../pageWrapper";
 import Footer from "../Footer";
 
 const Akatsuki = () => {
@@ -23,28 +22,30 @@ const Akatsuki = () => {
     getAkatsuki();
   }, []);
   return (
-    <PageWrapper>
+    <div className="h-max">
       <Nav />
       {loading ? (
         <Loading />
       ) : (
-        <div className="flex flex-wrap gap-6 p-2 w-full sm:justify-around items-center">
+        <div className="flex flex-wrap gap-4 p-2 w-full justify-around items-center">
           {akatsuki.map((item) => {
             return (
               <div
-                className="sm:size-52 size-32 bg-center bg-no-repeat bg-cover rounded-md p-2"
+                className="sm:size-52 size-28 bg-center bg-no-repeat bg-cover rounded-md p-2"
                 style={{
                   backgroundImage: `url(${item.images[0] || item.images[1]})`,
                 }}
               >
-                <h3 className="text-white font-bold">{item.name}</h3>
+                <h3 className="text-white sm:text-md text-sm font-bold">
+                  {item.name}
+                </h3>
               </div>
             );
           })}
         </div>
       )}
       <Footer />
-    </PageWrapper>
+    </div>
   );
 };
 export default Akatsuki;

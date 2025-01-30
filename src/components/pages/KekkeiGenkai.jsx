@@ -1,12 +1,11 @@
 import Nav from "../Nav";
-import PageWrapper from "../pageWrapper";
 import Footer from "../Footer";
 import ImageCard from "../ImageCard";
 const KekkeiGenkai = () => {
   return (
-    <PageWrapper>
+    <div className="h-max">
       <Nav />
-      <div className="p-4 bg-gray-950 text-white">
+      <div className="p-4">
         <h1 className="text-3xl underline font-bold mb-4">Kekkei Genkai</h1>
         <p>
           Kekkei genkai (血継限界, literally meaning: Bloodline Limit) are DNA
@@ -18,7 +17,7 @@ const KekkeiGenkai = () => {
           this is not always the case.
         </p>
         <h2 className="mt-4 mb-4">Some Kekkei Genkai:</h2>
-        <div className="flex gap-8 flex-wrap justify-center">
+        <div className="flex gap-4 flex-wrap justify-around">
           <ImageCard
             name={"Byakugan"}
             src={
@@ -131,7 +130,7 @@ const KekkeiGenkai = () => {
       </div>
 
       <Footer />
-    </PageWrapper>
+    </div>
   );
 };
 export default KekkeiGenkai;

@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import Nav from "../Nav";
 import Footer from "../Footer";
-import PageWrapper from "../pageWrapper";
 import Loading from "../Loading";
 const Villages = () => {
   const [villages, setVillages] = useState(null);
@@ -26,7 +25,7 @@ const Villages = () => {
   console.log(loading);
 
   return (
-    <PageWrapper>
+    <div className="h-max">
       <Nav />
       <div className="min-h-[80%]">
         {loading ? (
@@ -43,7 +42,7 @@ const Villages = () => {
       </div>
 
       <Footer />
-    </PageWrapper>
+    </div>
   );
 };
 export default Villages;
